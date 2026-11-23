@@ -1,0 +1,121 @@
+{
+  "video": "examples/demo.mp4",
+  "duration": 36.0,
+  "width": 360,
+  "height": 640,
+  "every": 2.0,
+  "timestamps_burned_in": true,
+  "sheets": [
+    {
+      "sheet": "sheet_001.png",
+      "tiles": [
+        {
+          "row": 1,
+          "col": 1,
+          "time": "00:00"
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "time": "00:02"
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "time": "00:04"
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "time": "00:06"
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "time": "00:08"
+        },
+        {
+          "row": 1,
+          "col": 6,
+          "time": "00:10"
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "time": "00:12"
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "time": "00:14"
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "time": "00:16"
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "time": "00:18"
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "time": "00:20"
+        },
+        {
+          "row": 2,
+          "col": 6,
+          "time": "00:22"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "time": "00:24"
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "time": "00:26"
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "time": "00:28"
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "time": "00:30"
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "time": "00:32"
+        },
+        {
+          "row": 3,
+          "col": 6,
+          "time": "00:34"
+        }
+      ]
+    }
+  ],
+  "signals": [
+    {
+      "type": "white/blank screen",
+      "start": 24.0,
+      "end": 27.0,
+      "duration": 3.0,
+      "at": "00:24-00:27"
+    },
+    {
+      "type": "frozen screen",
+      "start": 27.0,
+      "end": 33.0,
+      "duration": 6.0,
+      "at": "00:27-00:33"
+    }
+  ]
+}

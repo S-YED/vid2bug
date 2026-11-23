@@ -1,0 +1,4 @@
+Played Snack Catch and caught 13 apples.
+Results screen named the wrong game.
+After Continue the screen went white, then home kept loading.
+XP stayed at 120 after the game.

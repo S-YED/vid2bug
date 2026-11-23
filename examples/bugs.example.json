@@ -1,0 +1,46 @@
+[
+  {
+    "id": "BUG-01",
+    "title": "Mission Complete shows the previous game's name and score",
+    "severity": "Critical",
+    "area": "Results / scoring",
+    "times": ["00:21"],
+    "box": [16, 92, 230, 74],
+    "steps": ["Sign in", "Open Snack Catch from Home", "Play until the round ends"],
+    "expected": "Mission Complete shows Snack Catch and the apples caught (13)",
+    "actual": "Mission Complete shows 'Hide and Seek' with 'Score: 7 / 10'",
+    "fix_hint": "Results screen may read a stale report from the last game; check that the report is fetched by the current game session id"
+  },
+  {
+    "id": "BUG-02",
+    "title": "Blank white screen for 3 seconds after tapping Continue",
+    "severity": "High",
+    "area": "Results -> Home navigation",
+    "times": ["00:25"],
+    "steps": ["Finish any game", "Tap Continue on Mission Complete"],
+    "expected": "Home opens straight away, or a loading state is shown",
+    "actual": "The whole screen is white for about 3 seconds"
+  },
+  {
+    "id": "BUG-03",
+    "title": "Home stuck on 'Loading your progress...' for 6 seconds",
+    "severity": "Medium",
+    "area": "Home",
+    "times": ["00:28", "00:32"],
+    "steps": ["Finish any game", "Tap Continue", "Wait on Home"],
+    "expected": "Progress loads in under 2 seconds",
+    "actual": "Spinner shows for about 6 seconds with no change",
+    "fix_hint": "Check the progress API response time and add a timeout with retry"
+  },
+  {
+    "id": "BUG-04",
+    "title": "XP does not increase after finishing a game",
+    "severity": "High",
+    "area": "Home / XP",
+    "times": ["00:08", "00:34"],
+    "steps": ["Note XP on Home (120)", "Play Snack Catch to the end", "Return to Home"],
+    "expected": "XP = 120 + 80 = 200, as promised on Mission Complete",
+    "actual": "XP is still 120",
+    "fix_hint": "Verify the XP update is saved to the database, not only shown on the results screen"
+  }
+]

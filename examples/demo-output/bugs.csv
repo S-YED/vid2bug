@@ -1,0 +1,12 @@
+ID,Title,Severity,Area,Time,Steps to reproduce,Expected,Actual,Fix hint,Evidence,Status
+BUG-01,Mission Complete shows the previous game's name and score,Critical,Results / scoring,00:21,"1. Sign in
+2. Open Snack Catch from Home
+3. Play until the round ends",Mission Complete shows Snack Catch and the apples caught (13),Mission Complete shows 'Hide and Seek' with 'Score: 7 / 10',Results screen may read a stale report from the last game; check that the report is fetched by the current game session id,evidence/BUG-01_00-21.png,Open
+BUG-02,Blank white screen for 3 seconds after tapping Continue,High,Results -> Home navigation,00:25,"1. Finish any game
+2. Tap Continue on Mission Complete","Home opens straight away, or a loading state is shown",The whole screen is white for about 3 seconds,,evidence/BUG-02_00-25.png,Open
+BUG-04,XP does not increase after finishing a game,High,Home / XP,"00:08, 00:34","1. Note XP on Home (120)
+2. Play Snack Catch to the end
+3. Return to Home","XP = 120 + 80 = 200, as promised on Mission Complete",XP is still 120,"Verify the XP update is saved to the database, not only shown on the results screen","evidence/BUG-04_00-08.png, evidence/BUG-04_00-34.png",Open
+BUG-03,Home stuck on 'Loading your progress...' for 6 seconds,Medium,Home,"00:28, 00:32","1. Finish any game
+2. Tap Continue
+3. Wait on Home",Progress loads in under 2 seconds,Spinner shows for about 6 seconds with no change,Check the progress API response time and add a timeout with retry,"evidence/BUG-03_00-28.png, evidence/BUG-03_00-32.png",Open
